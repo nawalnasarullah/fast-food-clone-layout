@@ -1,16 +1,25 @@
 *{
     padding: 0;
     margin: 0;
-    --primary-color: #D50000;
+    --primary-color: rgba(213, 0, 0, 0.6);
+    --red-color: rgba(213, 0, 0);
     --white: #fff;
     --black: #000;
-    --transparent-black: rgba(0, 0, 0, 0.6);
+    --grey: #ebe9eb;
+    --transparent-black: rgba(0, 0, 0, 0.4);
+    --hover-black: rgba(0, 0, 0, 0.7);
 }
 
 body{
     font-family: 'Anton', sans-serif;
     font-weight: 100;
     font-size: 16px;
+}
+.bg-img{
+    position: relative;
+}
+.bg-img img{
+    width: 100%;
 }
 
 .container{
@@ -20,6 +29,10 @@ body{
 
 .primary-nav{
     background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .inner-primary-nav{
@@ -27,22 +40,51 @@ body{
     justify-content: space-between;
 }
 
-.primary-nav ul{
+.inner-primary-nav ul.social-bar{
     display: flex;
     list-style-type: none;
 }
 
-.primary-nav ul li{
+.inner-primary-nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.inner-primary-nav ul li{
     padding: 12px;
 }
 
-.primary-nav li a{
+.inner-primary-nav ul li a{
     text-decoration: none;
     color: var(--white);
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.inner-primary-nav ul li a:hover{
+    color: var(--black);
+}
+
+.inner-primary-nav ul.social-bar li a span{
+    -webkit-transition: width 2s, -webkit-transform 2s;
+}
+
+.inner-primary-nav ul.social-bar li a span:hover{
+    color: var(--black);
+    display: inline-block;
+    -webkit-transform: rotateY(-360deg);
+}
+
+.icon-pie-chart{
+    padding: 8px;
 }
 
 .main-nav{
     background-color: var(--transparent-black);
+    position: absolute;
+    top: 48px;
+    right: 0;
+    left: 0;
 }
 
 .inner-main-nav{
@@ -68,9 +110,10 @@ body{
     text-decoration: none;
     color: var(--white);
     padding: 6px 12px;
+    -webkit-transition: all .2s ease-in-out;
 }
 
-.inner-main-nav ul li a:hover{
+.inner-main-nav ul li:nth-child(-n+6) a:hover{
     background-color: var(--primary-color);
     padding: 6px 12px;
     border-radius: 6px;
@@ -85,4 +128,105 @@ body{
     background-color: var(--primary-color);
     padding: 6px 12px;
     border-radius: 6px;
+}
+
+.header-img-text{
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    left: 60%;
+    transform: translate(-60px, -20px)
+    
+}
+
+.header-img-text h3{
+    color: var(--white);
+    width: 100%;
+    font-weight: 400;
+}
+
+.text-align-1{
+    font-size: 90px;
+}
+
+.text-align-2{
+    font-size: 97px;
+}
+
+
+.header-img-text a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--red-color);
+    padding: 8px 35px;
+    margin: 20px;
+    border-radius: 6px;
+}
+
+.main-content{
+    text-align: center;
+}
+
+.content-heading{
+    color: var(--red-color);
+    font-size: 40px;
+    font-weight: lighter;
+    padding: 20px;
+    margin: 20px;
+}
+
+.icon-minus{
+    color: var(--grey);
+    padding: 15px;
+}
+
+.menu-products{
+    display: flex;
+}
+
+.product{
+    margin: 12px;
+    position: relative;
+}
+
+.product img{
+    width: 100%;
+    height: 100%;
+}
+
+.product a.food-text{
+    position: absolute;
+    color: var(--white);
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: +10;
+    transition: opacity 0.3s; 
+}
+
+.product div.overlay-shadow{
+    position: absolute;
+    background-color: var(--transparent-black);
+    inset: 0;
+    transition: background-color 0.3s;
+}
+
+.product div.overlay-shadow:hover{
+    background-color: var(--hover-black);
+}
+
+.product:hover a.food-text{
+    opacity: 0;
+}
+
+
+.ad-section{
+    position: relative;
+    margin: 20px;
+}
+
+.ad-section img{
+    width: 100%;
 }
