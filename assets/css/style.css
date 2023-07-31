@@ -6,6 +6,7 @@
     --white: #fff;
     --black: #000;
     --grey: #ebe9eb;
+    --dark-grey: #999999;
     --transparent-black: rgba(0, 0, 0, 0.4);
     --hover-black: rgba(0, 0, 0, 0.7);
 }
@@ -177,7 +178,7 @@ body{
 .content-heading{
     color: var(--red-color);
     font-size: 40px;
-    font-weight: lighter;
+    font-weight: 100;
     padding: 20px;
     margin: 20px;
 }
@@ -208,31 +209,109 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: +10;
-    transition: opacity 0.3s; 
+    z-index: +2;
+    transition: opacity 0.2s; 
 }
 
 .product div.overlay-shadow{
     position: absolute;
     background-color: var(--transparent-black);
     inset: 0;
+    z-index: +1;
     transition: background-color 0.3s;
 }
 
-.product div.overlay-shadow:hover{
+
+.product:hover div.overlay-shadow{
     background-color: var(--hover-black);
-}
+} 
 
 .product:hover a.food-text{
     opacity: 0;
 }
 
-
 .ad-section{
     position: relative;
-    margin: 20px;
 }
 
 .ad-section img{
     width: 100%;
+}
+
+.ad-content{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    color: var(--red-color);
+}
+
+.ad-content h2.left-movement{
+    font-weight: 100;
+    font-size: 50px;
+    animation: scrollTextLeft 2s linear infinite;
+}
+
+@keyframes scrollTextLeft {
+    0% {
+        transform: translateX(0);
+      }
+      
+      50% {
+        transform: translateX(-25%);
+      }
+      
+}
+
+.ad-content h2.right-movement{
+    font-weight: 100;
+    font-size: 50px;
+    animation: scrollTextRight 2s linear infinite;
+}
+
+@keyframes scrollTextRight {
+    0% {
+        transform: translateX(0);
+      }
+      
+      50% {
+        transform: translateX(25%);
+      }
+      
+}
+
+.ad-content h5{
+    color: var(--dark-grey);
+    font-size: 16px;
+    font-family: Open Sans;
+    margin: 10px;
+}
+
+.ad-content a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--red-color);
+    margin: 30px;
+    padding: 10px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: Open Sans;
+    position: relative;
+}
+
+.red-stripe{
+    position: absolute;
+    z-index: 1;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--red-color);
+}
+
+.red-stripe h5{
+    font-weight: 100;
+    font-size: 25px;
+    color: var(--white);
 }
