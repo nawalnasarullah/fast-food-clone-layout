@@ -183,9 +183,18 @@ body{
     margin: 20px;
 }
 
-.icon-minus{
-    color: var(--grey);
-    padding: 15px;
+.content-heading div{
+    display: inline-block;
+}
+
+.line-side-solo{
+   background-color: var(--grey);
+   width: 30px;
+   font-size: 0;
+   height: 4px;
+   margin: 0 0 20px 0;
+   display: inline-block;
+   vertical-align: middle;
 }
 
 .menu-products{
