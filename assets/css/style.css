@@ -202,43 +202,59 @@ body{
 }
 
 .product{
-    margin: 12px;
     position: relative;
+    margin: 12px;
+    height: 100%;
 }
 
-.product img{
+
+.img-link{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
     width: 100%;
     height: 100%;
 }
 
-.product a.food-text{
+.img-link img{
+    width: 100%; 
+    border-radius: 5px;
+}
+
+.img-link h3{
     position: absolute;
-    color: var(--white);
+    font-family: 'Anton', sans-serif;
+    font-weight: 100;
     font-size: 30px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: +2;
-    transition: opacity 0.2s; 
+    color: var(--white); 
+    z-index: +1;
+    transition: opacity 0.2s ease; 
 }
 
-.product div.overlay-shadow{
+.overlay-shadow{
     position: absolute;
     background-color: var(--transparent-black);
-    inset: 0;
-    z-index: +1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 5px;
     transition: background-color 0.3s;
+    border-radius: 5px;
+    
 }
-
 
 .product:hover div.overlay-shadow{
     background-color: var(--hover-black);
 } 
 
-.product:hover a.food-text{
+.product:hover h3{
     opacity: 0;
 }
-
+  
+ 
 .ad-section{
     position: relative;
 }
