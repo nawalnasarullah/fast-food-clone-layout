@@ -28,6 +28,11 @@ body{
     margin: 0 auto;
 }
 
+.gap-section{
+    margin: 70px;
+    text-align: center;
+}
+
 .primary-nav{
     background-color: var(--primary-color);
     position: absolute;
@@ -251,8 +256,48 @@ body{
 .product:hover h3{
     opacity: 0;
 }
+
+.overlay-hover{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    border-radius: 5px;
+    background-color: var(--hover-black);
+}
+
+.overlay-hover p{
+    position: absolute;
+    top: 50%;
+    color: var(--white);
+    font-size: 18px;
+    font-family: Open Sans;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.diamond{
+    position: absolute;
+    width: 134px;
+    height: 134px;
+    border: 1px solid var(--white);
+    top: 65%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    rotate: 45deg;
+    scale: 0;
+    transition: scale 1s;
+}
+
+.product:hover .diamond{
+    scale: 1;
+}
+
+.product:hover .overlay-hover{
+    opacity: 1;
+    transition: all 1s;
+}
   
- 
+
 .ad-section{
     position: relative;
 }
@@ -337,4 +382,15 @@ body{
     font-weight: 100;
     font-size: 25px;
     color: var(--white);
+}
+
+.pizza-section{
+    display: flex;
+}
+
+.pizza-pic{
+    width: 50%;
+}
+.pizza-pic img{
+    width: 100%;
 }
