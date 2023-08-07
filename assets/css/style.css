@@ -399,24 +399,24 @@ body{
     width: 50%;
 }
 
-.pizza-heading{
+.food-heading{
     align-items: center;
 }
 
-.pizza-heading h2{
+.food-heading h2{
     color: var(--red-color);
     margin: 20px;
     font-size: 40px;
 }
 
-.pizza-products{
+.food-products{
     text-align: left;
     margin: 20px;
 }
 
 
 
-.pizza-products ul li{
+.food-products ul li{
     list-style-type: none;
     display: flex;
     padding: 5px;
@@ -427,7 +427,7 @@ body{
     position: relative;
 }
 
-.pizza-products ul li::after{
+.food-products ul li::after{
     display: block;
     float: right;
     position: absolute;
