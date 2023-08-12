@@ -10,6 +10,8 @@
     --musky-grey: #555555;
     --transparent-black: rgba(0, 0, 0, 0.4);
     --hover-black: rgba(0, 0, 0, 0.7);
+    --yellow: #fa0;
+    --green: #81d742;
 }
 
 body{
@@ -366,6 +368,12 @@ body{
     font-size: 13px;
     font-family: Open Sans;
     position: relative;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+.ad-content a:hover{
+    background-color: var(--white);
+    color: var(--red-color);
 }
 
 .red-stripe{
@@ -384,18 +392,20 @@ body{
     color: var(--white);
 }
 
-.pizza-section{
+.food-section{
     display: flex;
 }
 
-.pizza-pic{
+.food-pic{
     width: 50%;
 }
-.pizza-pic img{
+.food-pic img{
     width: 100%;
+    height: 100%;
+    display: block;
 }
 
-.pizza-menu{
+.food-menu{
     width: 50%;
 }
 
@@ -409,33 +419,77 @@ body{
     font-size: 40px;
 }
 
-.food-products{
-    text-align: left;
-    margin: 20px;
+
+.food-products ul{
+    list-style-type: none;
+    text-align: center;
 }
 
-
-
 .food-products ul li{
-    list-style-type: none;
     display: flex;
-    padding: 5px;
-    font-size: 20px;
-    margin: 20px;
     color: var(--musky-grey);
-    line-height: 1em;
+    padding: 12px 12px;
     position: relative;
 }
 
-.food-products ul li::after{
-    display: block;
-    float: right;
+.pizza-list li::before{
+    font-family: 'icomoon' !important;
+    content: '\e99a';
+    color: var(--red-color);
     position: absolute;
-    left: 30%;
-    margin-top: .8em; 
-    border-top: 2px dotted var(--grey);
-    width: 70%;
-    content: "";
+    right: 99%;
+    bottom: 16px;
 }
 
+.food-products ul li h4{
+    font-weight: 100;
+    text-align: left;
+}
+
+.line{
+    width: 70%;
+    border-bottom: 2px dotted var(--grey);
+    align-items: center;
+}
+
+.menu-item{
+    flex: 1;
+    text-align: center;
+}
+
+
+.menu-item:nth-child(2){
+    flex: 3;
+}
+
+.menu-item:nth-child(1){
+    flex: 1.5;
+}
+
+.burger-list li::before{
+    font-family: 'icomoon' !important;
+    color: var(--grey);
+    content: '\e9bd';
+    position: absolute;
+    right: 99%;
+    bottom: 16px;
+}
+
+.pasta-list li::before{
+    font-family: 'icomoon' !important;
+    color: var(--yellow);
+    content: '\e900';
+    position: absolute;
+    right: 99%;
+    bottom: 16px;
+}
+
+.salad-list li::before{
+    font-family: 'icomoon' !important;
+    color: var(--green);
+    content: '\e9a4';
+    position: absolute;
+    right: 99%;
+    bottom: 16px;
+}
 
