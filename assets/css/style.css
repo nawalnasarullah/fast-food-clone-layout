@@ -379,7 +379,7 @@ body{
 .red-stripe{
     position: absolute;
     z-index: 1;
-    padding: 20px;
+    padding: 25px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -491,5 +491,38 @@ body{
     position: absolute;
     right: 99%;
     bottom: 16px;
+}
+
+.order-now-stripe{
+    padding: 25px;
+    background-color: var(--red-color);
+}
+
+.order-now-stripe a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.order-now-stripe a h5{
+    display: inline-block;
+    color: var(--white);
+    font-weight: 100;
+    font-size: 20px;
+    transition: transform 0.4s ease-in-out;
+    position: relative;
+    padding: 0 12px;
+}
+
+.order-now-stripe a h5::before{
+    font-family: 'icomoon' !important;
+    content: '\e942';
+    color: var(--white);
+    position: absolute;
+    right: 100%;
+    bottom: 5px;
+}
+
+.order-now-stripe a h5:hover{
+    transform: scale(1.2); 
 }
 
