@@ -623,7 +623,19 @@ body{
 
 .message-box{
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 20px;
+    left: 16px;
+    font-size: 28px;
 }
 
+.message-box ul li{
+    list-style-type: none;
+}
+
+.message-box ul li a{
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 99px;
+    background-color: var(--yellow);
+    color: var(--musky-grey);
+}
