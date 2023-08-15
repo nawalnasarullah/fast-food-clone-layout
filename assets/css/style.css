@@ -74,7 +74,7 @@ body{
 }
 
 .inner-primary-nav ul.social-bar li a span{
-    -webkit-transition: width 2s, -webkit-transform 2s;
+    -webkit-transition: width 2s, -webkit-transform 0.9s;
 }
 
 .inner-primary-nav ul.social-bar li a span:hover{
@@ -573,7 +573,7 @@ body{
 }
 
 .contact-bar ul.social-bar li a span{
-    -webkit-transition: width 2s, -webkit-transform 0.2s;
+    -webkit-transition: width 2s, -webkit-transform 0.9s;
     
 }
 
