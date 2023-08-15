@@ -378,7 +378,6 @@ body{
 
 .red-stripe{
     position: absolute;
-    z-index: 1;
     padding: 25px;
     left: 0;
     bottom: 0;
@@ -410,13 +409,17 @@ body{
 }
 
 .food-heading{
-    align-items: center;
+    text-align: center;
 }
 
 .food-heading h2{
     color: var(--red-color);
     margin: 20px;
     font-size: 40px;
+}
+
+.food-products{
+    text-align: center;
 }
 
 
@@ -448,9 +451,10 @@ body{
 
 .line{
     width: 70%;
+    margin-bottom: .4em;
     border-bottom: 2px dotted var(--grey);
     align-items: center;
-}
+} 
 
 .menu-item{
     flex: 1;
@@ -463,7 +467,7 @@ body{
 }
 
 .menu-item:nth-child(1){
-    flex: 1.5;
+    flex: 1.4;
 }
 
 .burger-list li::before{
